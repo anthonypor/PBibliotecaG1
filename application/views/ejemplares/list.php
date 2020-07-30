@@ -1,3 +1,11 @@
+
+<div class="row">
+    <div class="col-lg-12">                     
+            <div class="pull-right">
+               <a class="btn btn-primary fas fa-plus-square" href="<?php echo base_url('ejemplares/create') ?>"> Create New Product</a>
+            </div>
+     </div>
+</div>
 <div class="table-responsive">
 <table class="table table-striped table-dark ">
   <thead>
