@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+Hola <?php echo $this->session->userdata('user');?>
+=======
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
@@ -89,3 +92,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 </body>
 </html>
+>>>>>>> 1c4e34a58a8f50ac7df1425779b376cfa2b5713c
