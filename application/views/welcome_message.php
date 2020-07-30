@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+Hola <?php echo $this->session->userdata('user');?>
+=======
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
@@ -84,6 +87,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
 </div>
+<p> hola soy lenin</p>
+<p> esperando el login </p>
 
 </body>
 </html>
+
