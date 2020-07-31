@@ -9,12 +9,12 @@
 <body>
 <div class="container">
 <div>
-<h1 align="center" class="text-white bg-dark"> Ejemplar de Obras </h1>
+<h1 align="center" class="text-white bg-dark"> Biblioteca </h1>
 </div>
 <div class="row">
     <div class="col-lg-12">                     
             <div class="pull-right">
-               <a class="btn btn-primary fas fa-plus-square" href="<?php echo base_url('ejemplar/create') ?>"> Crear un nuevo ejemplar </a>
+               <a class="btn btn-primary fas fa-plus-square" href="<?php echo base_url('ejemplar/create') ?>"> Crear </a>
             </div>
      </div>
 </div>

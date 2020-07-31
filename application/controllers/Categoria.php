@@ -9,7 +9,7 @@ class Categoria extends CI_Controller {
 		$this->load->model('model_categoria');
 		$result = $this->model_categoria->consultar();
 
-		$datos= array('registros'=>$result);
+		$datos= array('register'=>$result);
         $this->load->view('includes/header');
 		$this->load->view('categorias/lista_cat',$datos);
 		$this->load->view('includes/footer');

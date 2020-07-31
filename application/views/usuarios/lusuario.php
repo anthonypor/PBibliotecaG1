@@ -38,3 +38,4 @@
    <?php endforeach; ?>
   </tbody>
 </table>
+<a class="btn btn-primary fas fa-plus-square" href="<?php echo base_url('usuario/crear') ?>"> Crear </a>
