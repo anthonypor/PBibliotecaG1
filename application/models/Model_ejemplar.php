@@ -11,20 +11,22 @@ class Model_ejemplar extends CI_Model {
          $this->db->insert('ejemplar',$data);
          
         }
-        public function update_person($id_ejem) 
+        public function update_ejem($ejem_id) 
     {
         $data=array(
-            'nombres' => $this->input->post('nombres'),
-            'apellidos'=> $this->input->post('apellidos'),
-            'edad'=> $this->input->post('edad'),
-            'email'=> $this->input->post('email'),
-            'direccion'=> $this->input->post('direccion')
+            'ejem_titulo' => $this->input->post('ejem_titulo'),
+            'ejem_editorial' => $this->input->post('ejem_editorial'),
+            'ejem_paginas' => $this->input->post('ejem_paginas'),
+            'ejem_idioma' => $this->input->post('ejem_idioma'),
+            'ejem_audio' => $this->input->post('ejem_audio'),
+            'ejem_resumen' => $this->input->post('ejem_resumen'),
+            'ejem_anio' => $this->input->post('ejem_anio'),
         );
-        if($id==0){
+        if($ejem_id==0){
             return $this->db->insert('ejemplar',$data);
         }
         else{
-            $this->db->where('id_ejem',$id_ejem);
+            $this->db->where('ejem_id',$ejem_id);
             return $this->db->update('ejemplar',$data);
         }        
     }
