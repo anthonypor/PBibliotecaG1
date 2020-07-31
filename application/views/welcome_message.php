@@ -5,6 +5,8 @@ Hola <?php echo $this->session->userdata('user');?>
 Hola <?php echo $this->session->userdata('user');?>
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
@@ -100,3 +102,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 >>>>>>> 2897b59b36c6c6cc9261f5bc62bde085552943c2
 >>>>>>> 7c929631b41dd051bf66abc4fb6908335b884e44
+>>>>>>> f5846e61601a60bb8cee3e4ee84edd72f5196789
