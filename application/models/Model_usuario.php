@@ -14,8 +14,8 @@ class Model_usuario extends CI_Model {
         public function update_us($usua_id) 
     {
         $data=array(
-            'usua_login' => $this->input->post('usua_login'),
-            'usua_password' => $this->input->post('usua_password'),
+            'usuario' => $this->input->post('usuario'),
+            'password' => $this->input->post('password'),
             'usua_codigo' => $this->input->post('usua_codigo'),
             'usua_nombres' => $this->input->post('usua_nombres'),
             'usua_apellidos' => $this->input->post('usua_apellidos'),

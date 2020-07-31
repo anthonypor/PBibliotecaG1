@@ -3,12 +3,12 @@
 <form method="post" action="<?php echo base_url('usuario/guardar') ?>">
 <div class="form-group">
     <label>Login</label>
-    <input type="text" class="form-control" name="usua_login" >
+    <input type="text" class="form-control" name="usuario" >
     
   </div>
   <div class="form-group">
     <label>Password</label>
-    <input type="text" class="form-control" name="usua_password" >
+    <input type="text" class="form-control" name="password" >
     
   </div>
   <div class="form-group">

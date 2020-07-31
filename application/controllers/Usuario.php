@@ -22,8 +22,8 @@ class Usuario extends CI_Controller {
 	}
 	public function guardar()
 	{
-		$usua_login= $this->input->post('usua_login');
-		$usua_password= $this->input->post('usua_password');
+		$usuario= $this->input->post('usuario');
+		$password= $this->input->post('password');
 		$usua_codigo= $this->input->post('usua_codigo');
 		$usua_nombres= $this->input->post('usua_nombres');
 		$usua_apellidos= $this->input->post('usua_apellidos');
@@ -33,8 +33,8 @@ class Usuario extends CI_Controller {
 		$usua_esadmin= $this->input->post('usua_esadmin');
 
 		$this->load->model('model_usuario');
-		$data =array('usua_login'=>$usua_login, 
-				     'usua_password'=>$usua_password,
+		$data =array('usuario'=>$usuario, 
+				     'password'=>$password,
 					 'usua_codigo'=>$usua_codigo,
 					 'usua_nombres'=>$usua_nombres,
 					 'usua_apellidos'=>$usua_apellidos,
