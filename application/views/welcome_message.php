@@ -4,6 +4,8 @@ Hola <?php echo $this->session->userdata('user');?>
 <<<<<<< HEAD
 
 Hola <?php echo $this->session->userdata('user');?>
+<<<<<<< HEAD
+=======
 =======
 Hola <?php echo $this->session->userdata('user');?>
 <<<<<<< HEAD
@@ -107,3 +109,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 >>>>>>> 7c929631b41dd051bf66abc4fb6908335b884e44
 >>>>>>> f5846e61601a60bb8cee3e4ee84edd72f5196789
 >>>>>>> b72d956073d950c29de8b744c19d38e805c0706f
+>>>>>>> 18aad73ce88c8eeb53483c9744420f45917ceba0
