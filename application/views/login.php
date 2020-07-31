@@ -8,6 +8,9 @@
     
    <div class="col-sn-8">
      <div class="modal-content">
+         <div >
+             
+</div>
      <div  class="container">
      <img src="https://cdn.iconscout.com/icon/free/png-512/avatar-380-456332.png" width="150" height="150"/>
      </div>
@@ -24,7 +27,7 @@
         </p>
         
         <p>
-            <button type="submit" value="Ingresar" class="btn btn-info"><i class="fas fa-sign-in-alt"></i> ingresar </button>
+            <button type="submit"  class="btn btn-info"><i class="fas fa-sign-in-alt" ></i>ingresar </button>
         </p>
        
     </form>
