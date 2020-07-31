@@ -1,7 +1,7 @@
 <table class="table table-striped table-hover ">
   <thead>
       <tr>
-          <th>ID</th>
+          <
           <th>Categorias</th>
           <th>Opciones</th>
       </tr>
