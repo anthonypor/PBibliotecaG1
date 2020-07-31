@@ -33,3 +33,10 @@
    <?php endforeach; ?>
   </tbody>
 </table>
+<div class="row">
+    <div class="col-lg-12">                     
+            <div class="pull-right">
+               <a class="btn btn-primary fas fa-plus-square" href="<?php echo base_url('ejemplar/create') ?>"> Crear </a>
+            </div>
+     </div>
+</div>
