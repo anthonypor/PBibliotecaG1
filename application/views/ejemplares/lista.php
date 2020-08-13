@@ -9,6 +9,8 @@
       <th>Idioma</th>
       <th>Audio</th>
       <th>Resumen</th>
+      <th>Tipo</th>
+      <th>Categoria</th>
       <th>Año</th>
       <th>Opciones</th>
       </tr>
@@ -22,6 +24,8 @@
           <td><?php echo $reg->ejem_idioma; ?></td>          
           <td><?php echo $reg->ejem_audio; ?></td> 
           <td><?php echo $reg->ejem_resumen; ?></td> 
+          <td><?php echo $reg->ejem_tipo_id; ?></td> 
+          <td><?php echo $reg->ejem_cate_id; ?></td> 
           <td><?php echo $reg->ejem_anio; ?></td> 
       <td>
         <form method="DELETE" action="<?php echo base_url('ejemplar/delete/'.$reg->ejem_id);?>">

@@ -24,7 +24,7 @@
         </p>
         
         <p>
-            <button type="submit" value="Ingresar" class="btn btn-info"<?php echo base_url('ejemplar')?>><i class="fas fa-sign-in-alt"></i> ingresar </button>
+            <button type="submit" value="Ingresar" class="btn btn-info"><i class="fas fa-sign-in-alt"></i> ingresar </button>
            
             
            
