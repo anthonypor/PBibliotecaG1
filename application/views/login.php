@@ -24,11 +24,19 @@
         </p>
         
         <p>
+<<<<<<< HEAD
             <button type="submit" value="Ingresar" class="btn btn-info"><i class="fas fa-sign-in-alt"></i> ingresar </button>
+=======
+<<<<<<< HEAD
+           <imput type="submit"   value="Ingresar" action="<?php echo base_url('welcome.php') ?>"><button> ingresar </button>
+=======
+            <button type="submit" value="Ingresar" class="btn btn-info"<?php echo base_url('ejemplar')?>><i class="fas fa-sign-in-alt"></i> ingresar </button>
+>>>>>>> 3863862e4609bfbf11ace0ecad2f8aea1a2633e4
            
             
            
 
+>>>>>>> e2ecc16a02d5237759c50488f144a65ac8e036b6
         </p>
        
     </form>

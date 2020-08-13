@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+
+ <?php echo $this->session->userdata('user');?>
+
+ <?php echo $this->session->userdata('user');?>
+
+=======
+<<<<<<< HEAD
 Hola <?php echo $this->session->userdata('user');?>
 =======
 <<<<<<< HEAD
@@ -13,6 +20,7 @@ Hola <?php echo $this->session->userdata('user');?>
 <<<<<<< HEAD
 =======
 =======
+>>>>>>> 71e611b091fde354bba21f10775562cc21d9ec20
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
@@ -82,31 +90,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
 
-<div id="container">
-	<h1>Menu</h1>
-
-	<div id="body">
-		<p>chicos para hacer el codigo.</p>
-
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
-
-		<p>The corresponding  for this page is found at:</p>
-		<code>application/controllers/Welcome.php</code>
-
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
-	</div>
-
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
-</div>
-<p> hola soy lenin</p>
-<p> esperando el login </p>
 
 </body>
 </html>
 
+<<<<<<< HEAD
+
+=======
 >>>>>>> 2897b59b36c6c6cc9261f5bc62bde085552943c2
 >>>>>>> 7c929631b41dd051bf66abc4fb6908335b884e44
 >>>>>>> f5846e61601a60bb8cee3e4ee84edd72f5196789
 >>>>>>> b72d956073d950c29de8b744c19d38e805c0706f
 >>>>>>> 18aad73ce88c8eeb53483c9744420f45917ceba0
+>>>>>>> 71e611b091fde354bba21f10775562cc21d9ec20

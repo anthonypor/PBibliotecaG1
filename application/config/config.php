@@ -7,8 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |--------------------------------------------------------------------------
 |
 | URL to your CodeIgniter root. Typically this will be your base URL,
-| WITH a trailing slash:
-|
+| WITH a trailing slash: 
 |	http://example.com/
 |
 | WARNING: You MUST set this value!
@@ -24,7 +23,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 
-$config['base_url'] = 'http://localhost/PBibliotecaG1/';
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +34,7 @@ $config['base_url'] = 'http://localhost/PBibliotecaG1/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = '';
+$config['index_page'] = 'index.php';
 
 /*
 |--------------------------------------------------------------------------
