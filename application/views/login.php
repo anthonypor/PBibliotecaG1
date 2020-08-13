@@ -16,15 +16,23 @@
     <form method="post" class="col-12" action="<?php echo base_url('Login/evaluar') ?>">
         <p>
             
-            <input type="text " class="form-control" placeholder="usuario">
+            <input type="text " class="form-control" placeholder="usuario" name="usuario">
         </p>
         <p>
             
-            <input type="password" class ="form-control "placeholder="password">
+            <input type="password" class ="form-control "placeholder="password" name="password">
         </p>
         
         <p>
+<<<<<<< HEAD
            <imput type="submit"   value="Ingresar" action="<?php echo base_url('welcome.php') ?>"><button> ingresar </button>
+=======
+            <button type="submit" value="Ingresar" class="btn btn-info"<?php echo base_url('ejemplar')?>><i class="fas fa-sign-in-alt"></i> ingresar </button>
+           
+            
+           
+
+>>>>>>> e2ecc16a02d5237759c50488f144a65ac8e036b6
         </p>
        
     </form>

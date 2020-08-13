@@ -5,7 +5,7 @@
             <div class="form-group">
                 <label class="col-md-3">Login</label>
                 <div class="col-md-9">
-                    <input type="text" name="usua_login" class="form-control" value="<?php echo $us->usua_login; ?>">
+                    <input type="text" name="usuario" class="form-control" value="<?php echo $us->usuario; ?>">
                 </div>
             </div>
         </div>
@@ -13,7 +13,7 @@
             <div class="form-group">
                 <label class="col-md-3">Password</label>
                 <div class="col-md-9">
-                    <input type="text" name="usua_password" class="form-control" value="<?php echo $us->usua_password; ?>">
+                    <input type="text" name="password" class="form-control" value="<?php echo $us->password; ?>">
                 </div>
             </div>
         </div>

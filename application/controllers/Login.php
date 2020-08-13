@@ -19,10 +19,10 @@ class Login extends CI_Controller {
             echo "Bienvenido {$row->usuario}";
             $data=array('user'=>$row->usuario,'usua_id'=>$row->usua_id,'auth'=>true);
             $this->session->set_userdata($data);
-            redirect();
+            redirect('ejemplar');
         }else{
             echo "Usuario o contraseña incorrecta.";
-            redirect('Login');
+            redirect('login');
         }
     }
 

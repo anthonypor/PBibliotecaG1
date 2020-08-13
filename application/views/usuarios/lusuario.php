@@ -18,8 +18,8 @@
   <tbody>
    <?php foreach ($registro as $dat) : ?>      
       <tr>
-          <td><?php echo $dat->usua_login; ?></td>
-          <td><?php echo $dat->usua_password; ?></td> 
+          <td><?php echo $dat->usuario; ?></td>
+          <td><?php echo $dat->password; ?></td> 
           <td><?php echo $dat->usua_codigo; ?></td>
           <td><?php echo $dat->usua_nombres; ?></td>          
           <td><?php echo $dat->usua_apellidos; ?></td> 
@@ -38,3 +38,4 @@
    <?php endforeach; ?>
   </tbody>
 </table>
+<a class="btn btn-primary fas fa-plus-square" href="<?php echo base_url('usuario/crear') ?>"> Crear </a>
