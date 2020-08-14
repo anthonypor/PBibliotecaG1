@@ -22,9 +22,11 @@
             
             <input type="password" class ="form-control "placeholder="password" name="password">
         </p>
-        
         <p>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7737fb1233d1e298f9b169e37773fcfd704c6ae6
             <button type="submit" value="Ingresar" class="btn btn-info"><i class="fas fa-sign-in-alt"></i> ingresar </button>
         </p>
        
