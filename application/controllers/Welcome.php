@@ -9,7 +9,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('includes/header');
 		$this->load->view('menu');
 		
-		$this->load->view('footer');
+		$this->load->view('includes/footer');
 	}
 	public function confidencial(){
 		

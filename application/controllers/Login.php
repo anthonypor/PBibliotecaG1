@@ -5,9 +5,8 @@ class Login extends CI_Controller {
 
 	public function index()
 	{   
-        $this->load->view('header');
         $this->load->view('login');
-        $this->load->view('footer');
+        $this->load->view('includes/footer');
     }
     public function evaluar(){
         $usuario = $this->input->post('usuario');
