@@ -47,6 +47,7 @@
     
   </div>
 <p>
+
 <input type="submit" value="Guardar" class="btn btn-primary">
 </p>
 

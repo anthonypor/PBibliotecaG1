@@ -1,3 +1,7 @@
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
 <h1>Informacion de las Obras</h1>
 <?php 
   echo form_open('ejemplar/guardar');
@@ -68,10 +72,8 @@
   echo form_input($data_an,"");
   echo form_label('Categoria:','categoria');
   echo form_dropdown('ejem_cate_id',$opciones);
-  
-  echo form_submit('Guardar','Guardar',);
-  
-  echo form_close();
-  
-  
-?>
+ ?> 
+ 
+<br>
+  <input type="submit" value="Guardar" class="btn btn-primary">
+<?php echo form_close(); ?>
