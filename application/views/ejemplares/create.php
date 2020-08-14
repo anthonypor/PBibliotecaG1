@@ -57,6 +57,7 @@
   );
   echo form_label('Tipo:','7');
   echo form_input($data_t,"");
+  
   $data_an= array(
     'id'=>'9',
     'name'=>'ejem_anio',
@@ -66,7 +67,7 @@
   echo form_label('Año:','9');
   echo form_input($data_an,"");
   echo form_label('Categoria:','categoria');
-  echo form_dropdown('cate_id',$opciones);
+  echo form_dropdown('ejem_cate_id',$opciones);
   
   echo form_submit('Guardar','Guardar',);
   

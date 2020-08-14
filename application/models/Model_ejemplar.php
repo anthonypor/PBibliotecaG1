@@ -12,11 +12,7 @@ class Model_ejemplar extends CI_Model {
             return $opciones;
         }
         public function consultar()
-{         $rows = $this->db->query(" 
-    SELECT * FROM ejemplar1,categoria
-    WHERE ejem_cate_id=cate_id")->result();
-    $data['rows']= $rows;
-        $query = $this->db->get('ejemplar1', 10);
+{            $query = $this->db->get('ejemplar1', 10);
         return $query->result();
 }
         public function guardar($data){

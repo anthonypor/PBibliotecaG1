@@ -8,14 +8,13 @@ class Ejemplar extends CI_Controller {
 		//$this->load->database();
 		$this->load->model('model_ejemplar');
 		$result = $this->model_ejemplar->consultar();
-
-		$datos= array('registros'=>$result);
+		//$datos= array('registros'=>$result);
+		$rows = $this->db->query("
+		 SELECT * FROM ejemplar1,categoria
+		  WHERE ejem_cate_id=cate_id ")->result();
+        $data['rows']= $rows;
 		$this->load->view('includes/header');
-		$rows = $this->db->query(" 
-		SELECT * FROM ejemplar1,categoria
-		WHERE ejem_cate_id=cate_id")->result();
-		$data['rows']= $rows;
-		$this->load->view('ejemplares/lista',$datos);
+		$this->load->view('ejemplares/lista',$data);
 		$this->load->view('includes/footer');
 	}
 	public function create()
@@ -23,13 +22,13 @@ class Ejemplar extends CI_Controller {
 		$this->load->view('includes/header');
 		$this->load->helper('form');
 		$this->load->model('Model_ejemplar');
-		$opciones = $this->Model_ejemplar->getCategorias();
-		$data['opciones'] = $opciones;
+		 $opciones=$this->Model_ejemplar->getCategorias();
+		$data['opciones'] = $opciones; 
 		$this->load->view('ejemplares/create',$data); 
 		$this->load->view('includes/footer');
 	}
 	public function guardar()
-	{
+	{ 
 		$ejem_titulo= $this->input->post('ejem_titulo');
 		$ejem_editorial= $this->input->post('ejem_editorial');
 		$ejem_paginas= $this->input->post('ejem_paginas');
@@ -37,7 +36,7 @@ class Ejemplar extends CI_Controller {
 		$ejem_audio= $this->input->post('ejem_audio');
 		$ejem_resumen= $this->input->post('ejem_resumen');
 		$ejem_tipo_id= $this->input->post('ejem_tipo_id'); 
-		$cate_id= $this->input->post('cate_id');
+		$ejem_cate_id= $this->input->post('ejem_cate_id');
 		$ejem_anio= $this->input->post('ejem_anio');
 		$this->load->model('model_ejemplar');
 		$data =array('ejem_titulo'=>$ejem_titulo, 
@@ -47,7 +46,7 @@ class Ejemplar extends CI_Controller {
 					 'ejem_audio'=>$ejem_audio,
 					 'ejem_resumen'=>$ejem_resumen,
 					 'ejem_tipo_id'=>$ejem_tipo_id,
-					 'cate_id'=>$cate_id,
+					 'ejem_cate_id'=>$ejem_cate_id,
 					 'ejem_anio'=>$ejem_anio
 				);
 				$this->model_ejemplar->guardar($data);
