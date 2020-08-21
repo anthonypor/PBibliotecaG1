@@ -1,6 +1,15 @@
 
-
-<table class="table table-striped table-dark ">
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#book-table').DataTable({
+        "ajax": {
+            url : "<?php echo site_url("ejemplar/index") ?>",
+            type : 'GET'
+        },
+    });
+});
+</script>
+<table id = "book-table" class = "table table-bordered table-striped table-hover ">
   <thead>
       <tr>
           <th>Titulo</th>
@@ -44,3 +53,4 @@
             </div>
      </div>
 </div>
+
