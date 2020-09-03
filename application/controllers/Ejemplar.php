@@ -5,10 +5,11 @@ class Ejemplar extends CI_Controller {
 
 	public function index()
 	{  
-		//$this->load->database();
+		$draw = intval($this->input->get('draw'));
+		$start = intval($this->input->get('start'));
+		$length = intval($this->input->get('length'));
 		$this->load->model('model_ejemplar');
 		$result = $this->model_ejemplar->consultar();
-		//$datos= array('registros'=>$result);
 		$rows = $this->db->query("
 		 SELECT * FROM ejemplar1,categoria
 		  WHERE ejem_cate_id=cate_id ")->result();
@@ -17,6 +18,44 @@ class Ejemplar extends CI_Controller {
 		$this->load->view('ejemplares/lista',$data);
 		$this->load->view('includes/footer');
 	}
+	public function get_items()
+	{
+		$draw = intval($this->input->get('draw'));
+		$start = intval($this->input->get('start'));
+		$length = intval($this->input->get('length'));
+		$query = $this->db->get("index");
+
+
+      $data = [];
+
+
+      foreach($query->result() as $r) {
+           $data[] = array(
+                $r->ejem_titulo,
+				$r->ejem_editorial,
+				$r->ejem_paginas,
+				$r->ejem_idioma,
+				$r->ejem_audio,
+				$r->ejem_resumen,
+				$r->ejem_tipo_id,
+				$r->ejem_cate_id,
+                $r->ejem_anio
+           );
+      }
+
+
+      $result = array(
+               "draw" => $draw,
+                 "recordsTotal" => $query->num_rows(),
+                 "recordsFiltered" => $query->num_rows(),
+                 "data" => $data
+            );
+
+
+      echo json_encode($result);
+      exit();
+     }
+	 
 	public function create()
 	{    
 		$this->load->view('includes/header');

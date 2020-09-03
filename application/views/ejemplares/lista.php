@@ -1,27 +1,17 @@
 
-<script type="text/javascript">
-$(document).ready(function() {
-    $('#book-table').DataTable({
-        "ajax": {
-            url : "<?php echo site_url("ejemplar/index") ?>",
-            type : 'GET'
-        },
-    });
-});
-</script>
-<table id = "book-table" class = "table table-bordered table-striped table-hover ">
+<table id = "book-table" class = "table table-striped table-bordered " style="width:100%">
   <thead>
       <tr>
-          <th>Titulo</th>
-          <th>Editorial</th>
-      <th>Paginas</th>
-      <th>Idioma</th>
-      <th>Audio</th>
-      <th>Resumen</th>
-      <th>Tipo</th>
-      <th>Categoria</th>
-      <th>Año</th>
-      <th>Opciones</th>
+          <th style="width: 5%;background-color:#3371FF;color: white;">Titulo</th>
+          <th style="width: 5%;background-color:#3371FF;color: white;">Editorial</th>
+      <th style="width: 5%;background-color:#3371FF;color: white;">Paginas</th>
+      <th style="width: 5%;background-color:#3371FF;color: white;">Idioma</th>
+      <th style="width: 5%;background-color:#3371FF;color: white;">Audio</th>
+      <th style="width: 5%;background-color:#3371FF;color: white;">Resumen</th>
+      <th style="width: 5%;background-color:#3371FF;color: white;">Tipo</th>
+      <th style="width: 5%;background-color:#3371FF;color: white;">Categoria</th>
+      <th style="width: 5%;background-color:#3371FF;color: white;">Año</th>
+      <th style="width: 5%;background-color:#3371FF;color: white;">Opciones</th>
       </tr>
   </thead>
   <tbody>
@@ -46,6 +36,25 @@ $(document).ready(function() {
    <?php endforeach; ?>
   </tbody>
 </table>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#book-table').DataTable({
+        "Ajax": {
+            url : "/get_items",
+            type : 'GET',
+            responsive: 'true',
+            dom: 'Btrtilp',
+            buttons: [
+               { extend: 'excelHtml5',
+                text: '<i class="fas fa-file-excel"></i>',
+                titleAttr: 'Exportar a Excel',
+                className: 'btn btn-successs'
+               },
+            ]
+        },
+    });
+});
+</script>
 <div class="row">
     <div class="col-lg-12">                     
             <div class="pull-right">
