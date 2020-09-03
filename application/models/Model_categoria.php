@@ -1,13 +1,15 @@
 <?php
 class Model_categoria extends CI_Model {
 
+    function foredit(){
+        return $this->db->query('SELECT * FROM ejemplar1,categoria WHERE ejem_cate_id=cate_id')->result();
+    }
         public function consultar()
 {
         $query = $this->db->get('categoria', 10);
         return $query->result();
 }
         public function guardar($data){
-        
          $this->db->insert('categoria',$data);
          
         }

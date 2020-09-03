@@ -1,7 +1,6 @@
 <table class="table table-striped table-hover ">
   <thead>
       <tr>
-          <
           <th>Categorias</th>
           <th>Opciones</th>
       </tr>

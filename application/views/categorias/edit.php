@@ -1,5 +1,4 @@
 
-
 <form method="post" action="<?php echo base_url('categoria/update/'.$cat->cate_id);?>">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -10,7 +9,7 @@
                 </div>
             </div>
         </div>
-        
+        <?php echo validation_errors(); ?>
         <div class="col-md-8 col-md-offset-2 pull-right">
             <input type="submit" name="Save" class="btn btn-primary btn-xs fas fa-edit">
         </div>

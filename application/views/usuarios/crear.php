@@ -55,8 +55,8 @@
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Por favor rellene este campo.</div>
   </div>
+  <?php echo validation_errors(); ?>
 <p>
-
 <input type="submit" value="Guardar" class="btn btn-primary">
 </p>
 

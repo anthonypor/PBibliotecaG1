@@ -72,8 +72,8 @@
   echo form_input($data_an,"");
   echo form_label('Categoria:','categoria');
   echo form_dropdown('ejem_cate_id',$opciones);
- ?> 
- 
+?>  
+<?php echo validation_errors(); ?>
 <br>
   <input type="submit" value="Guardar" class="btn btn-primary">
 <?php echo form_close(); ?>
