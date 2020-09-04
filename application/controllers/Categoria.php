@@ -56,26 +56,36 @@ class Categoria extends CI_Controller {
 	}
 	public function edit($cate_id)
    {
-       $cat = $this->db->get_where('categoria', array('cate_id' => $cate_id))->row();
+	   $cat = $this->db->get_where('categoria', array('cate_id' => $cate_id))->row();
+	
        $this->load->view('includes/header');
        $this->load->view('categorias/edit',array('cat'=>$cat));
        $this->load->view('includes/footer');   
    }
+   
    public function update($cate_id)
    {
-	$this->Validar_campos();
 
 	$this->load->model('model_categoria');
-	   
-	   
-	   //if ($this->form_validation->run()){
-		   $cat = new Model_categoria;
-       $cat->update_cat($cate_id);
+	//$data['cat'] = $this->model_categoria->update_cat($cate_id);
+	$this->Validar_campos();
+	$cat = new Model_categoria;
+	
+	//$cat = $this->model_categoria->update_cat($cate_id);
+	
+	  if ($this->form_validation->run()){
+		//$cate=array();
+		//$cate=$this->input->post('cate_nombre');
+		$cat->update_cat($cate_id);
+		   //$cat = new Model_categoria;
+	   //$cat->update_cat($cate_id);
+	   //$this->load->view('categoria',$data);
 	   redirect(base_url('categoria'));
-	/*}
+
+	   }
 	else{
 		$this->novalida2();
-	}*/
+	}
    }
 
    public function delete($cate_id)

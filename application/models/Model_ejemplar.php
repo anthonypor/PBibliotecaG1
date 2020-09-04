@@ -11,6 +11,7 @@ class Model_ejemplar extends CI_Model {
             }
             return $opciones;
         }
+        
         public function consultar()
 {            $query = $this->db->get('ejemplar1', 10);
         return $query->result();

@@ -46,6 +46,7 @@ class Usuario extends CI_Controller {
 	}
 	public function guardar()
 	{
+	
 		$this->Validar_campos();
 		$usuario= $this->input->post('usuario');
 		$password= $this->input->post('password');
@@ -86,10 +87,17 @@ class Usuario extends CI_Controller {
    }
    public function update($usua_id)
    {
+	
 	$this->load->model('model_usuario');
-       $us = new Model_usuario;
+	   $us = new Model_usuario;
+	   $this->Validar_campos();
+	   if ($this->form_validation->run()){
        $us->update_us($usua_id);
-       redirect(base_url('usuario'));
+	   redirect(base_url('usuario'));
+	 }
+	 else{
+		$this->novalida2();
+	}
    }
    public function delete($usua_id)
    {

@@ -6,7 +6,7 @@
     <input type="text" class="form-control" name="cate_nombre">
     
   </div>
-  <?php echo validation_errors(); ?>
+  <?php echo form_error('cate_nombre'); ?>
 <p>
 <input type="submit" value="Guardar" class="btn btn-primary">
 </p>

@@ -13,7 +13,11 @@ class Ejemplar extends CI_Controller {
 		$rows = $this->db->query("
 		 SELECT * FROM ejemplar1,categoria
 		  WHERE ejem_cate_id=cate_id ")->result();
-        $data['rows']= $rows;
+		$data['rows']= $rows;
+		$reg = $this->db->query("
+		 SELECT * FROM ejemplar1,categoria
+		  WHERE ejem_cate_id=cate_id ")->result();
+		$data['reg']= $reg;
 		$this->load->view('includes/header');
 		$this->load->view('ejemplares/lista',$data);
 		$this->load->view('includes/footer');
@@ -72,9 +76,10 @@ class Ejemplar extends CI_Controller {
 		$this->form_validation->set_rules("ejem_editorial", "Editorial", "trim|required|alpha_numeric_spaces");
 		$this->form_validation->set_rules("ejem_paginas", "Nro_paginas", "trim|required|numeric");
 		$this->form_validation->set_rules("ejem_idioma", "Idioma", "trim|required|alpha");
-		$this->form_validation->set_rules("ejem_audio", "audio", "trim|required|");
-		$this->form_validation->set_rules("ejem_resumen", "resumen", "trim|required|");
-		
+		$this->form_validation->set_rules("ejem_audio", "audio", "required");
+		$this->form_validation->set_rules("ejem_resumen", "resumen", "required");
+		$this->form_validation->set_rules("ejem_tipo_id", "Tipo de libro", "required");
+		$this->form_validation->set_rules("ejem_cate_id", "Categoria", "callback_ejem_cate_id_check");
 		$this->form_validation->set_rules("ejem_anio", "Año", "trim|required|numeric|min_length[4]");
 	}
 	public function novalida1()
@@ -91,7 +96,6 @@ class Ejemplar extends CI_Controller {
 	}
 	public function guardar()
 	{ 
-		$this->Validar_campos();
 		$ejem_titulo= $this->input->post('ejem_titulo');
 		$ejem_editorial= $this->input->post('ejem_editorial');
 		$ejem_paginas= $this->input->post('ejem_paginas');
@@ -101,6 +105,7 @@ class Ejemplar extends CI_Controller {
 		$ejem_tipo_id= $this->input->post('ejem_tipo_id'); 
 		$ejem_cate_id= $this->input->post('ejem_cate_id');
 		$ejem_anio= $this->input->post('ejem_anio');
+		$this->Validar_campos();
 		$this->load->model('model_ejemplar');
 		
 		if ($this->form_validation->run()){
@@ -121,6 +126,7 @@ class Ejemplar extends CI_Controller {
 				$this->novalida1();
 			}
 	}
+	
 	public function edit($ejem_id)
    {
        $ejem = $this->db->get_where('ejemplar1', array('ejem_id' => $ejem_id))->row();
@@ -136,10 +142,16 @@ class Ejemplar extends CI_Controller {
    {
 	   
 	$this->load->model('model_ejemplar');
-
-       $ejem = new Model_ejemplar;
+	   $ejem = new Model_ejemplar;
+	   $this->Validar_campos();
+	   if ($this->form_validation->run()){
        $ejem->update_ejem($ejem_id);
-       redirect(base_url('ejemplar'));
+	   redirect(base_url('ejemplar'));
+	   }
+	   else{
+		$this->novalida2();
+	}
+		
    }
    public function delete($ejem_id)
    {
