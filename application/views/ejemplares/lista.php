@@ -62,4 +62,11 @@ $(document).ready(function() {
             </div>
      </div>
 </div>
+<div class="row">
+    <div class="col-lg-12">                     
+            <div class="pull-right">
+               <a class="btn btn-primary fas fa-print" href="<?php echo base_url('reportes/index') ?>"> Imprimir </a>
+            </div>
+     </div>
+</div>
 

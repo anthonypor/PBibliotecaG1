@@ -8,7 +8,7 @@ class Usuario extends CI_Controller {
 		//$this->load->database();
 		$this->load->model('model_usuario');
 		$result = $this->model_usuario->consultar();
-
+ 
 		$datos= array('registro'=>$result);
         $this->load->view('includes/header');
 		$this->load->view('usuarios/lusuario',$datos);
@@ -101,7 +101,7 @@ class Usuario extends CI_Controller {
    }
    public function delete($usua_id)
    {
-       $this->db->where('usua_id', $usua_id);
+	   $this->db->where('usua_id', $usua_id);
        $this->db->delete('usuario');
        redirect(base_url('usuario'));
    }

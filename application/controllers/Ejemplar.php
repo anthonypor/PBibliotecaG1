@@ -5,7 +5,7 @@ class Ejemplar extends CI_Controller {
 
 	public function index()
 	{  
-		$draw = intval($this->input->get('draw'));
+		$draw = intval($this->input->get('draw')); 
 		$start = intval($this->input->get('start'));
 		$length = intval($this->input->get('length'));
 		$this->load->model('model_ejemplar');
@@ -75,7 +75,7 @@ class Ejemplar extends CI_Controller {
 		$this->form_validation->set_rules("ejem_titulo", "Titulo", "trim|required");
 		$this->form_validation->set_rules("ejem_editorial", "Editorial", "trim|required|alpha_numeric_spaces");
 		$this->form_validation->set_rules("ejem_paginas", "Nro_paginas", "trim|required|numeric");
-		$this->form_validation->set_rules("ejem_idioma", "Idioma", "trim|required|alpha");
+		//$this->form_validation->set_rules("ejem_idioma", "Idioma", "trim|required|alpha");
 		$this->form_validation->set_rules("ejem_audio", "audio", "required");
 		$this->form_validation->set_rules("ejem_resumen", "resumen", "required");
 		$this->form_validation->set_rules("ejem_tipo_id", "Tipo de libro", "required");
@@ -105,10 +105,10 @@ class Ejemplar extends CI_Controller {
 		$ejem_tipo_id= $this->input->post('ejem_tipo_id'); 
 		$ejem_cate_id= $this->input->post('ejem_cate_id');
 		$ejem_anio= $this->input->post('ejem_anio');
-		$this->Validar_campos();
+		//$this->Validar_campos();
 		$this->load->model('model_ejemplar');
 		
-		if ($this->form_validation->run()){
+		//if ($this->form_validation->run()){
 		$data =array('ejem_titulo'=>$ejem_titulo, 
 				     'ejem_editorial'=>$ejem_editorial,
 					 'ejem_paginas'=>$ejem_paginas,
@@ -121,10 +121,7 @@ class Ejemplar extends CI_Controller {
 				);
 				$this->model_ejemplar->guardar($data);
 				redirect('ejemplar');
-			}
-			else{
-				$this->novalida1();
-			}
+			
 	}
 	
 	public function edit($ejem_id)
