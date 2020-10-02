@@ -100,7 +100,7 @@ class Ejemplar extends CI_Controller {
 		$this->Validar_campos();
 
 		
-		if ($this->form_validation->run()){		
+		//if ($this->form_validation->run()){		
 			
 			$ejem_titulo= $this->input->post('ejem_titulo');
 			$ejem_editorial= $this->input->post('ejem_editorial');
@@ -127,10 +127,10 @@ class Ejemplar extends CI_Controller {
 					);
 				$this->model_ejemplar->guardar($data);
 				redirect('ejemplar');
-			}
+			/*}
 			else{
 					$this->novalida2();
-				}
+				}*/
 			
 		}
 	
@@ -154,13 +154,13 @@ class Ejemplar extends CI_Controller {
 	   $ejem = new Model_ejemplar;
 	   $this->Validar_campos();
 
-	   if ($this->form_validation->run()){
+	  // if ($this->form_validation->run()){
        $ejem->update_ejem($ejem_id);
 	   redirect(base_url('ejemplar'));
-	   }
+	  /* }
 	   else{
 		$this->novalida2();
-	}
+	}*/
 		
    }
    public function delete($ejem_id)
