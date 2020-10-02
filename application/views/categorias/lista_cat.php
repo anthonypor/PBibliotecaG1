@@ -1,4 +1,4 @@
-<table class="table table-striped table-hover ">
+<table id = "tablecat" class = "table table-striped table-bordered " style="width:100%">
   <thead>
       <tr>
           <th>Categorias</th>
@@ -20,4 +20,23 @@
    <?php endforeach; ?>
   </tbody>
 </table>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tablecat').DataTable({
+        "Ajax": {
+            url : "/get_items",
+            type : 'GET',
+            responsive: 'true',
+            dom: 'Btrtilp',
+            buttons: [
+               { extend: 'excelHtml5',
+                text: '<i class="fas fa-file-excel"></i>',
+                titleAttr: 'Exportar a Excel',
+                className: 'btn btn-successs'
+               },
+            ]
+        },
+    });
+});
+</script>
 <a class="btn btn-primary fas fa-plus-square" href="<?php echo base_url('categoria/create') ?>"> Crear </a>

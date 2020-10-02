@@ -20,6 +20,43 @@ class Usuario extends CI_Controller {
 		$this->load->view('usuarios/crear'); 
 		$this->load->view('includes/footer');
 	}
+	public function get_items()
+	{
+		$draw = intval($this->input->get('draw'));
+		$start = intval($this->input->get('start'));
+		$length = intval($this->input->get('length'));
+		$query = $this->db->get("index");
+
+
+      $data = [];
+
+
+      foreach($query->result() as $s) {
+           $data[] = array(
+                $s->usuario,
+				$s->password,
+				$s->usua_codigo,
+				$s->usua_nombres,
+				$s->usua_apellidos,
+				$s->usua_direccion,
+				$s->usua_email,
+				$s->usua_telefono,
+				$s->usua_esadmin
+           );
+      }
+
+
+      $result = array(
+               "draw" => $draw,
+                 "recordsTotal" => $query->num_rows(),
+                 "recordsFiltered" => $query->num_rows(),
+                 "data" => $data
+            );
+
+
+      echo json_encode($result);
+      exit();
+     }
 	public function Validar_campos()
 	{
 		$this->form_validation->set_rules("usuario", "Usuario", "trim|required|alpha_dash");
@@ -42,6 +79,16 @@ class Usuario extends CI_Controller {
 	{
 		$this->load->view('includes/header');
 		$this->load->view('usuarios/editar'); 
+		$this->load->view('includes/footer');
+	}
+	public function create()
+	{    
+		$this->load->view('includes/header');
+		$this->load->helper('form');
+		$this->load->model('Model_ejemplar');
+		$opciones=$this->Model_ejemplar->getCategorias();
+		$data['opciones'] = $opciones; 
+		$this->load->view('ejemplares/create',$data); 
 		$this->load->view('includes/footer');
 	}
 	public function guardar()

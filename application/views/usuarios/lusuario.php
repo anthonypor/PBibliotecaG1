@@ -1,6 +1,5 @@
 
-
-<table class="table table-striped table-dark ">
+<table id = "table" class = "table table-striped table-bordered " style="width:100%">
   <thead>
       <tr>
         <th>Login</th>
@@ -38,4 +37,23 @@
    <?php endforeach; ?>
   </tbody>
 </table>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#table').DataTable({
+        "Ajax": {
+            url : "/get_items",
+            type : 'GET',
+            responsive: 'true',
+            dom: 'Btrtilp',
+            buttons: [
+               { extend: 'excelHtml5',
+                text: '<i class="fas fa-file-excel"></i>',
+                titleAttr: 'Exportar a Excel',
+                className: 'btn btn-successs'
+               },
+            ]
+        },
+    });
+});
+</script>
 <a class="btn btn-primary fas fa-plus-square" href="<?php echo base_url('usuario/crear') ?>"> Crear </a>

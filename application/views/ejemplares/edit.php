@@ -48,18 +48,6 @@ echo '<td><font color="red">'.form_error('ejem_paginas').'</font></td>';
   echo form_input($data_i,"");
 echo '<td><font color="red">'.form_error('ejem_idioma').'</font></td>';
 
-  $data_a= array(
-    'id'=>'5',
-    'name'=>'ejem_audio',
-    'class'=>'form-control',
-    'placeholder'=>'Audio',
-    'value'=>$ejem->ejem_audio,
-    
-  );
-  echo form_label('Audio:','5');
-  echo form_input($data_a,"");
-echo '<td><font color="red">'.form_error('ejem_audio').'</font></td>';
-
   $data_r= array(
     'id'=>'6',
     'name'=>'ejem_resumen',
@@ -72,18 +60,7 @@ echo '<td><font color="red">'.form_error('ejem_audio').'</font></td>';
   echo form_input($data_r,"");
 echo '<td><font color="red">'.form_error('ejem_resumen').'</font></td>';
 
-  $data_t= array(
-    'id'=>'7',
-    'name'=>'ejem_tipo_id',
-    'class'=>'form-control',
-    'placeholder'=>'Tipo:',
-    'value'=>$ejem->ejem_tipo_id,
-    
-  );
-  echo form_label('Tipo:','7');
-  echo form_input($data_t,"");
-  echo '<td><font color="red">'.form_error('ejem_tipo_id').'</font></td>';
-
+  
 
   $data_an= array(
     'id'=>'9',
