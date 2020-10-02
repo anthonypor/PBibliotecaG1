@@ -42,10 +42,12 @@ class Categoria extends CI_Controller {
 	{
 		$this->Validar_campos();
 		
-			$cate_nombre= $this->input->post('cate_nombre');
-		
+		$cate_nombre= $this->input->post('cate_nombre');
+
 		$this->load->model('model_categoria');
+		
 		$data =array('cate_nombre'=>$cate_nombre);
+
 		if ($this->form_validation->run()){
 			$this->model_categoria->guardar($data);
 			redirect('categoria');

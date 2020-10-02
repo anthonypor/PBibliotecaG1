@@ -26,4 +26,5 @@ class Model_categoria extends CI_Model {
             return $this->db->update('categoria',$data);
         }        
     }
+    
 }

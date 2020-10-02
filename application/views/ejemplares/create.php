@@ -4,8 +4,9 @@
 
 <h1>Informacion de las Obras</h1>
 <?php 
-
+  
   echo form_open('ejemplar/guardar');
+  
   $data_n= array(
     'id'=>'1',
     'name'=>'ejem_titulo',
@@ -88,13 +89,6 @@
 
 
   echo form_label('Categoria:','categoria');
-  
-  $rows = $this->db->query('SELECT * FROM categoria')->result();
-  $opciones = array();
-            foreach($rows as $row){
-                $opciones[$row->cate_id]=$row->cate_nombre;
-                
-            }
             
   echo form_dropdown('ejem_cate_id',$opciones);
 

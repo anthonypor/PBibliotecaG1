@@ -1,5 +1,4 @@
 
-<!--<form method="post" action="<?php echo base_url('ejemplar/update/'.$ejem->ejem_id);?>">-->
 <h1>Informacion de las Obras</h1>
 <?php 
   echo form_open('ejemplar/guardar/'.$ejem->ejem_id);
@@ -7,7 +6,8 @@
     'id'=>'1',
     'name'=>'ejem_titulo',
     'class'=>'form-control',
-    'placeholder'=>'Titulo'
+    'placeholder'=>'Titulo',
+    'value'=>$ejem->ejem_titulo,
   );
   echo form_label('Titulo:','1');
   echo form_input($data_n,"");
@@ -17,7 +17,8 @@ echo '<td><font color="red">'.form_error('ejem_titulo').'</font></td>';
     'id'=>'2',
     'name'=>'ejem_editorial',
     'class'=>'form-control',
-    'placeholder'=>'Editorial'
+    'placeholder'=>'Editorial',
+    'value'=>$ejem->ejem_editorial,
   );
   echo form_label('Editorial:','2');
   echo form_input($data_e,"");
@@ -27,7 +28,9 @@ echo '<td><font color="red">'.form_error('ejem_editorial').'</font></td>';
     'id'=>'3',
     'name'=>'ejem_paginas',
     'class'=>'form-control',
-    'placeholder'=>'Paginas'
+    'placeholder'=>'Paginas',
+    'value'=>$ejem->ejem_paginas,
+    
   );
   echo form_label('Paginas:','3');
   echo form_input($data_p,"");
@@ -37,7 +40,9 @@ echo '<td><font color="red">'.form_error('ejem_paginas').'</font></td>';
     'id'=>'4',
     'name'=>'ejem_idioma',
     'class'=>'form-control',
-    'placeholder'=>'Idioma'
+    'placeholder'=>'Idioma',
+    'value'=>$ejem->ejem_idioma,
+    
   );
   echo form_label('Idioma:','4');
   echo form_input($data_i,"");
@@ -47,7 +52,9 @@ echo '<td><font color="red">'.form_error('ejem_idioma').'</font></td>';
     'id'=>'5',
     'name'=>'ejem_audio',
     'class'=>'form-control',
-    'placeholder'=>'Audio'
+    'placeholder'=>'Audio',
+    'value'=>$ejem->ejem_audio,
+    
   );
   echo form_label('Audio:','5');
   echo form_input($data_a,"");
@@ -57,7 +64,9 @@ echo '<td><font color="red">'.form_error('ejem_audio').'</font></td>';
     'id'=>'6',
     'name'=>'ejem_resumen',
     'class'=>'form-control',
-    'placeholder'=>'Resumen:'
+    'placeholder'=>'Resumen:',
+    'value'=>$ejem->ejem_resumen,
+    
   );
   echo form_label('Resumen:','6');
   echo form_input($data_r,"");
@@ -67,7 +76,9 @@ echo '<td><font color="red">'.form_error('ejem_resumen').'</font></td>';
     'id'=>'7',
     'name'=>'ejem_tipo_id',
     'class'=>'form-control',
-    'placeholder'=>'Tipo:'
+    'placeholder'=>'Tipo:',
+    'value'=>$ejem->ejem_tipo_id,
+    
   );
   echo form_label('Tipo:','7');
   echo form_input($data_t,"");
@@ -78,26 +89,19 @@ echo '<td><font color="red">'.form_error('ejem_resumen').'</font></td>';
     'id'=>'9',
     'name'=>'ejem_anio',
     'class'=>'form-control',
-    'placeholder'=>'Año'
+    'placeholder'=>'Año',
+    'value'=>$ejem->ejem_anio,
+    
   );
   
   echo form_label('Año:','9');
   echo form_input($data_an,"");
   echo '<td><font color="red">'.form_error('ejem_anio').'</font></td>';
-  $rows = $this->db->query('SELECT * FROM categoria')->result();
-  $opciones = array();
-            foreach($rows as $row){
-                $opciones[$row->cate_id]=$row->cate_nombre;
-                
-            }
-  $registros = array();
-            foreach($reg as $rog){
-    $registros[$rog->cate_id]=$rog->cate_nombre;
-    
-  }
+
   echo form_label('Categoria:','categoria');
-  echo form_dropdown('ejem_cate_id',$opciones,"$registros->ejem_cate_id");
+echo form_dropdown('ejem_cate_id',$opciones,$ejem->ejem_cate_id);
   
+
 
 ?>  
 <br>

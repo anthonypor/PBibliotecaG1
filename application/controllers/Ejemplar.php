@@ -96,43 +96,55 @@ class Ejemplar extends CI_Controller {
 	}
 	public function guardar()
 	{ 
-		$ejem_titulo= $this->input->post('ejem_titulo');
-		$ejem_editorial= $this->input->post('ejem_editorial');
-		$ejem_paginas= $this->input->post('ejem_paginas');
-		$ejem_idioma= $this->input->post('ejem_idioma');
-		$ejem_audio= $this->input->post('ejem_audio');
-		$ejem_resumen= $this->input->post('ejem_resumen');
-		$ejem_tipo_id= $this->input->post('ejem_tipo_id'); 
-		$ejem_cate_id= $this->input->post('ejem_cate_id');
-		$ejem_anio= $this->input->post('ejem_anio');
-		//$this->Validar_campos();
-		$this->load->model('model_ejemplar');
 		
-		//if ($this->form_validation->run()){
-		$data =array('ejem_titulo'=>$ejem_titulo, 
-				     'ejem_editorial'=>$ejem_editorial,
-					 'ejem_paginas'=>$ejem_paginas,
-					 'ejem_idioma'=>$ejem_idioma,
-					 'ejem_audio'=>$ejem_audio,
-					 'ejem_resumen'=>$ejem_resumen,
-					 'ejem_tipo_id'=>$ejem_tipo_id,
-					 'ejem_cate_id'=>$ejem_cate_id,
-					 'ejem_anio'=>$ejem_anio
-				);
+		$this->Validar_campos();
+
+		
+		if ($this->form_validation->run()){		
+			
+			$ejem_titulo= $this->input->post('ejem_titulo');
+			$ejem_editorial= $this->input->post('ejem_editorial');
+			$ejem_paginas= $this->input->post('ejem_paginas');
+			$ejem_idioma= $this->input->post('ejem_idioma');
+			$ejem_audio= $this->input->post('ejem_audio');
+			$ejem_resumen= $this->input->post('ejem_resumen');
+			$ejem_tipo_id= $this->input->post('ejem_tipo_id'); 
+			$ejem_cate_id= $this->input->post('ejem_cate_id');
+			$ejem_anio= $this->input->post('ejem_anio');
+			
+			$this->load->model('model_ejemplar');
+			 
+			
+			$data =array('ejem_titulo'=>$ejem_titulo, 
+						 'ejem_editorial'=>$ejem_editorial,
+						 'ejem_paginas'=>$ejem_paginas,
+						 'ejem_idioma'=>$ejem_idioma,
+						 'ejem_audio'=>$ejem_audio,
+						 'ejem_resumen'=>$ejem_resumen,
+						 'ejem_tipo_id'=>$ejem_tipo_id,
+						 'ejem_cate_id'=>$ejem_cate_id,
+						 'ejem_anio'=>$ejem_anio
+					);
 				$this->model_ejemplar->guardar($data);
 				redirect('ejemplar');
+			}
+			else{
+					$this->novalida2();
+				}
 			
-	}
+		}
 	
 	public function edit($ejem_id)
    {
        $ejem = $this->db->get_where('ejemplar1', array('ejem_id' => $ejem_id))->row();
 	   $this->load->view('includes/header');
+
 	   $this->load->helper('form');
 		$this->load->model('Model_ejemplar');
 		$opciones=$this->Model_ejemplar->getCategorias();
+		$data['ejem']= $ejem;
 		$data['opciones'] = $opciones; 
-       $this->load->view('ejemplares/edit',array('ejem'=>$ejem));
+       $this->load->view('ejemplares/edit',$data);
        $this->load->view('includes/footer');   
    }
    public function update($ejem_id)
@@ -141,6 +153,7 @@ class Ejemplar extends CI_Controller {
 	$this->load->model('model_ejemplar');
 	   $ejem = new Model_ejemplar;
 	   $this->Validar_campos();
+
 	   if ($this->form_validation->run()){
        $ejem->update_ejem($ejem_id);
 	   redirect(base_url('ejemplar'));
