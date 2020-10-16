@@ -2,15 +2,15 @@
 <table id = "book-table" class = "table table-striped table-bordered " style="width:100%">
   <thead>
       <tr>
-          <th style="width: 5%;background-color:#6B6C73;color: white;">Titulo</th>
-          <th style="width: 5%;background-color:#6B6C73;color: white;">Editorial</th>
-      <th style="width: 5%;background-color:#6B6C73;color: white;">Paginas</th>
-      <th style="width: 5%;background-color:#6B6C73;color: white;">Idioma</th>
-      <th style="width: 5%;background-color:#6B6C73;color: white;">Portada</th>
-      <th style="width: 5%;background-color:#6B6C73;color: white;">Resumen</th>
-      <th style="width: 5%;background-color:#6B6C73;color: white;">Categoria</th>
-      <th style="width: 5%;background-color:#6B6C73;color: white;">Año</th>
-      <th style="width: 5%;background-color:#6B6C73;color: white;">Opciones</th>
+          <th style="width: 5%;background-color:#454545;color: white;">Titulo</th>
+          <th style="width: 5%;background-color:#454545;color: white;">Editorial</th>
+      <th style="width: 5%;background-color:#454545;color: white;">Paginas</th>
+      <th style="width: 5%;background-color:#454545;color: white;">Idioma</th>
+      <th style="width: 5%;background-color:#454545;color: white;">Portada</th>
+      <th style="width: 5%;background-color:#454545;color: white;">Resumen</th>
+      <th style="width: 5%;background-color:#454545;color: white;">Categoria</th>
+      <th style="width: 5%;background-color:#454545;color: white;">Año</th>
+      <th style="width: 5%;background-color:#454545;color: white;">Opciones</th>
       </tr>
   </thead>
   <tbody>

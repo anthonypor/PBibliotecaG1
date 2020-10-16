@@ -1,17 +1,17 @@
 <div class="table-responsive">
-<table id = "table" class="table table-hover table-fixed" style="width:100%">
+<table id = "table" class="table table-striped table-bordered" style="width:100%">
   <thead>
       <tr>
-        <th style="width: 5%;background-color:#6B6C73;color: white;">Login</th>
-        <th  style="width: 5%;background-color:#6B6C73;color: white;">Password</th>
-        <th  style="width: 5%;background-color:#6B6C73;color: white;">Codigo</th>
-        <th  style="width: 5%;background-color:#6B6C73;color: white;">Nombres</th>
-        <th  style="width: 5%;background-color:#6B6C73;color: white;">Apellidos</th>
-        <th  style="width: 5%;background-color:#6B6C73;color: white;">Direccion</th>
-        <th  style="width: 5%;background-color:#6B6C73;color: white;">Correo</th>
-        <th  style="width: 5%;background-color:#6B6C73;color: white;">Telefono</th>
-        <th  style="width: 5%;background-color:#6B6C73;color: white;">Estatus</th>
-        <th  style="width: 5%;background-color:#6B6C73;color: white;">Opciones</th>
+        <th style="width: 5%;background-color:#454545;color: white;">Login</th>
+        <th  style="width: 5%;background-color:#454545;color: white;">Password</th>
+        <th  style="width: 5%;background-color:#454545;color: white;">Codigo</th>
+        <th  style="width: 5%;background-color:#454545;color: white;">Nombres</th>
+        <th  style="width: 5%;background-color:#454545;color: white;">Apellidos</th>
+        <th  style="width: 5%;background-color:#454545;color: white;">Direccion</th>
+        <th  style="width: 5%;background-color:#454545;color: white;">Correo</th>
+        <th  style="width: 5%;background-color:#454545;color: white;">Telefono</th>
+        <th  style="width: 5%;background-color:#454545;color: white;">Estatus</th>
+        <th  style="width: 5%;background-color:#454545;color: white;">Opciones</th>
       </tr>
   </thead>
   <tbody>

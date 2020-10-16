@@ -17,7 +17,7 @@ class Reportes extends CI_Controller {
         
             foreach($rows as $row){
      
-                $pdf->Cell(60,50,$row->ejem_titulo,1,'','C');
+                $pdf->Cell(60,50,utf8_decode($row->ejem_titulo),1,'','C');
                 $pdf->Cell(61,50,utf8_decode($row->ejem_editorial),1,'','C');
                 $pdf->Cell(30,50,utf8_decode($row->ejem_idioma),1,'','C');
                 $pdf->Cell(40,50,utf8_decode($row->ejem_anio),1,'','C');

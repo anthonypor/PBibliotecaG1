@@ -1,8 +1,8 @@
 <table id = "tablecat" class = "table table-striped table-bordered " style="width:100%">
   <thead>
       <tr>
-          <th style="width: 5%;background-color:#6B6C73;color: white;">Categorias</th>
-          <th style="width: 5%;background-color:#6B6C73;color: white;">Opciones</th>
+          <th style="width: 1%;background-color:#454545;color: white;">Categorias</th>
+          <th style="width: 1%;background-color:#454545;color: white;">Opciones</th>
       </tr>
   </thead>
   <tbody>
@@ -13,7 +13,7 @@
       <td>
         <form method="DELETE" action="<?php echo base_url('categoria/delete/'.$cot->cate_id);?>">
          <a class="btn btn-success btn-xs fas fa-edit" href="<?php echo base_url('categoria/edit/'.$cot->cate_id) ?>"><i class="glyphicon glyphicon-pencil">Editar</i></a>
-          <button type="submit" class="btn btn-danger btn-xs "><i class="glyphicon glyphicon-remove">Eliminar</i></button>
+          <button type="submit" class="btn btn-danger btn-xs fas fa-trash-alt "><i class="glyphicon glyphicon-remove">Eliminar</i></button>
         </form>
       </td>     
       </tr>

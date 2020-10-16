@@ -45,7 +45,7 @@
     </form>
      <div class="card-footer">
 				<div class="d-flex justify-content-center links">
-					No tienes una cuenta?<a href="#">Registrate</a>
+					No tienes una cuenta?<a href="<?php echo base_url('usuario/crear') ?>">Registrate</a>
 				</div>
 				<div class="d-flex justify-content-center">
 					<a href="#">Has olvidado tu contraseña?</a>
