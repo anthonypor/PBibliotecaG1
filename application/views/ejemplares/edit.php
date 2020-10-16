@@ -51,12 +51,12 @@ echo '<td><font color="red">'.form_error('ejem_idioma').'</font></td>';
 $data_a= array(
   'name'=>'ejem_audio',
   'class'=>'form-control',
-  'placeholder'=>'Imagen',
+  'placeholder'=>'Portada',
   'type'=>'file',
   'value'=>$ejem->ejem_audio,
 
 );
-echo form_label('Imagen:','ejem_audio');
+echo form_label('Portada:','ejem_audio');
 echo form_input($data_a,"");
 echo '<td><font color="red">'.form_error('ejem_audio').'</font></td>';
 

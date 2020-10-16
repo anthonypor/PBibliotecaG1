@@ -51,9 +51,9 @@
     'name'=>'ejem_audio',
     'class'=>'form-control',
     'type'=>'file',
-    'placeholder'=>'Imagen'
+    'placeholder'=>'Portada'
   );
-  echo form_label('Imagen:','ejem_audio');
+  echo form_label('Portada:','ejem_audio');
   echo form_input($data_a,"");
   echo '<td><font color="red">'.form_error('ejem_audio').'</font></td>';
 
