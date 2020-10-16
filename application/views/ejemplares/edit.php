@@ -1,7 +1,7 @@
 
 <h1>Informacion de las Obras</h1>
 <?php 
-  echo form_open('ejemplar/guardar/'.$ejem->ejem_id);
+  echo form_open_multipart('ejemplar/update/'.$ejem->ejem_id);
   $data_n= array(
     'id'=>'1',
     'name'=>'ejem_titulo',
@@ -48,6 +48,18 @@ echo '<td><font color="red">'.form_error('ejem_paginas').'</font></td>';
   echo form_input($data_i,"");
 echo '<td><font color="red">'.form_error('ejem_idioma').'</font></td>';
 
+$data_a= array(
+  'name'=>'ejem_audio',
+  'class'=>'form-control',
+  'placeholder'=>'Imagen',
+  'type'=>'file',
+  'value'=>$ejem->ejem_audio,
+
+);
+echo form_label('Imagen:','ejem_audio');
+echo form_input($data_a,"");
+echo '<td><font color="red">'.form_error('ejem_audio').'</font></td>';
+
   $data_r= array(
     'id'=>'6',
     'name'=>'ejem_resumen',
@@ -60,7 +72,16 @@ echo '<td><font color="red">'.form_error('ejem_idioma').'</font></td>';
   echo form_input($data_r,"");
 echo '<td><font color="red">'.form_error('ejem_resumen').'</font></td>';
 
-  
+$data_t= array(
+  'id'=>'7',
+  'name'=>'ejem_tipo_id',
+  'class'=>'form-control',
+  'placeholder'=>'Tipo:',
+  'value'=>$ejem->ejem_tipo_id,
+);
+echo form_label('Tipo:','7');
+echo form_input($data_t,"");
+echo '<td><font color="red">'.form_error('ejem_tipo_id').'</font></td>';
 
   $data_an= array(
     'id'=>'9',

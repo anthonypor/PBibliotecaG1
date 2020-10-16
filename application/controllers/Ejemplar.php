@@ -22,6 +22,26 @@ class Ejemplar extends CI_Controller {
 		$this->load->view('ejemplares/lista',$data);
 		$this->load->view('includes/footer');
 	}
+
+	public function do_upload($path,$name){
+               
+		$config['upload_path'] = $path;
+		$config['allowed_types'] = "gif|jpg|png";
+		$config['file_name'] = $name;
+		$config['max_size'] = "50000";
+		$config['max_width'] = "2000";
+		$config['max_height'] = "2000";
+
+		$this->load->library('upload', $config);
+		
+		if (!$this->upload->do_upload('ejem_audio')) {
+						return false;
+		}else{
+				$data = $this->upload->data();
+				return $data;
+		}
+		}
+
 	public function get_items()
 	{
 		$draw = intval($this->input->get('draw'));
@@ -99,9 +119,7 @@ class Ejemplar extends CI_Controller {
 		
 		$this->Validar_campos();
 
-		
 		//if ($this->form_validation->run()){		
-			
 			$ejem_titulo= $this->input->post('ejem_titulo');
 			$ejem_editorial= $this->input->post('ejem_editorial');
 			$ejem_paginas= $this->input->post('ejem_paginas');
@@ -111,15 +129,15 @@ class Ejemplar extends CI_Controller {
 			$ejem_tipo_id= $this->input->post('ejem_tipo_id'); 
 			$ejem_cate_id= $this->input->post('ejem_cate_id');
 			$ejem_anio= $this->input->post('ejem_anio');
-			
 			$this->load->model('model_ejemplar');
-			 
-			
+			$file = uniqid();
+			$data = $this->do_upload('./uploads/',$file);
+			$archivo = $data['file_name'];
 			$data =array('ejem_titulo'=>$ejem_titulo, 
 						 'ejem_editorial'=>$ejem_editorial,
 						 'ejem_paginas'=>$ejem_paginas,
 						 'ejem_idioma'=>$ejem_idioma,
-						 'ejem_audio'=>$ejem_audio,
+						 'ejem_audio'=>$archivo,
 						 'ejem_resumen'=>$ejem_resumen,
 						 'ejem_tipo_id'=>$ejem_tipo_id,
 						 'ejem_cate_id'=>$ejem_cate_id,
@@ -153,10 +171,24 @@ class Ejemplar extends CI_Controller {
 	$this->load->model('model_ejemplar');
 	   $ejem = new Model_ejemplar;
 	   $this->Validar_campos();
-
+	   $file = uniqid();
+	   $data = $this->do_upload('./uploads/',$file);
+	   $archivo = $data['file_name'];
+	   $data=array(
+		'ejem_titulo' => $this->input->post('ejem_titulo'),
+		'ejem_editorial' => $this->input->post('ejem_editorial'),
+		'ejem_paginas' => $this->input->post('ejem_paginas'),
+		'ejem_idioma' => $this->input->post('ejem_idioma'),
+		'ejem_audio' => $archivo,
+		'ejem_resumen' => $this->input->post('ejem_resumen'), 
+		'ejem_tipo_id' => $this->input->post('ejem_tipo_id'), 
+		'ejem_cate_id' => $this->input->post('ejem_cate_id'),
+		'ejem_anio' => $this->input->post('ejem_anio'),
+	);
 	  // if ($this->form_validation->run()){
-       $ejem->update_ejem($ejem_id);
+       $this->model_ejemplar-> update_ejem($ejem_id,$data);
 	   redirect(base_url('ejemplar'));
+
 	  /* }
 	   else{
 		$this->novalida2();
