@@ -1,4 +1,4 @@
-
+<div class="table-responsive">
 <table id = "book-table" class = "table table-striped table-bordered " style="width:100%">
   <thead>
       <tr>
@@ -34,6 +34,7 @@
    <?php endforeach; ?>
   </tbody>
 </table>
+</div>
 <script type="text/javascript">
 $(document).ready(function() {
     $('#book-table').DataTable({
@@ -53,18 +54,19 @@ $(document).ready(function() {
     });
 });
 </script>
-<div class="row">
+<div class="form-row text-center">
     <div class="col-lg-12">                     
             <div class="pull-right">
                <a class="btn btn-primary fas fa-plus-square" href="<?php echo base_url('ejemplar/create') ?>"> Crear </a>
             </div>
      </div>
 </div>
-<div class="row">
+<hr>
+<div class="form-row text-center">
     <div class="col-lg-12">                     
             <div class="pull-right">
                <a class="btn btn-primary fas fa-print" href="<?php echo base_url('reportes/index') ?>"> Imprimir </a>
             </div>
      </div>
 </div>
-
+<hr><hr>

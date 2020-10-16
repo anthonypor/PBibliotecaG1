@@ -1,5 +1,5 @@
-
-<table id = "table" class = "table table-striped table-bordered " style="width:100%">
+<div class="table-responsive">
+<table id = "table" class="table table-hover table-fixed" style="width:100%">
   <thead>
       <tr>
         <th style="width: 5%;background-color:#6B6C73;color: white;">Login</th>
@@ -57,3 +57,4 @@ $(document).ready(function() {
 });
 </script>
 <a class="btn btn-primary fas fa-plus-square" href="<?php echo base_url('usuario/crear') ?>"> Crear </a>
+</div>
