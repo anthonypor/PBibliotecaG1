@@ -6,6 +6,7 @@
           <th style="width: 5%;background-color:#3371FF;color: white;">Editorial</th>
       <th style="width: 5%;background-color:#3371FF;color: white;">Paginas</th>
       <th style="width: 5%;background-color:#3371FF;color: white;">Idioma</th>
+      <th style="width: 5%;background-color:#3371FF;color: white;">Audio</th>
       <th style="width: 5%;background-color:#3371FF;color: white;">Resumen</th>
       <th style="width: 5%;background-color:#3371FF;color: white;">Categoria</th>
       <th style="width: 5%;background-color:#3371FF;color: white;">Año</th>
@@ -18,7 +19,8 @@
           <td><?php echo $row->ejem_titulo; ?></td>
           <td><?php echo $row->ejem_editorial; ?></td> 
           <td><?php echo $row->ejem_paginas; ?></td>
-          <td><?php echo $row->ejem_idioma; ?></td>          
+          <td><?php echo $row->ejem_idioma; ?></td>   
+          <td><img src="<?php echo base_url('uploads/'.$row->ejem_audio); ?>" width="130"  ></td>        
           <td><?php echo $row->ejem_resumen; ?></td>  
           <td><?php echo $row->cate_nombre; ?></td> 
           <td><?php echo $row->ejem_anio; ?></td> 
