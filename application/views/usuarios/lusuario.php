@@ -2,16 +2,16 @@
 <table id = "table" class="table table-hover table-fixed" style="width:100%">
   <thead>
       <tr>
-        <th>Login</th>
-        <th>Password</th>
-        <th>Codigo</th>
-        <th>Nombres</th>
-        <th>Apellidos</th>
-        <th>Direccion</th>
-        <th>Correo</th>
-        <th>Telefono</th>
-        <th>Estatus</th>
-        <th>Opciones</th>
+        <th style="width: 5%;background-color:#6B6C73;color: white;">Login</th>
+        <th  style="width: 5%;background-color:#6B6C73;color: white;">Password</th>
+        <th  style="width: 5%;background-color:#6B6C73;color: white;">Codigo</th>
+        <th  style="width: 5%;background-color:#6B6C73;color: white;">Nombres</th>
+        <th  style="width: 5%;background-color:#6B6C73;color: white;">Apellidos</th>
+        <th  style="width: 5%;background-color:#6B6C73;color: white;">Direccion</th>
+        <th  style="width: 5%;background-color:#6B6C73;color: white;">Correo</th>
+        <th  style="width: 5%;background-color:#6B6C73;color: white;">Telefono</th>
+        <th  style="width: 5%;background-color:#6B6C73;color: white;">Estatus</th>
+        <th  style="width: 5%;background-color:#6B6C73;color: white;">Opciones</th>
       </tr>
   </thead>
   <tbody>

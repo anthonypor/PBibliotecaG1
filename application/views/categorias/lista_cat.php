@@ -1,8 +1,8 @@
 <table id = "tablecat" class = "table table-striped table-bordered " style="width:100%">
   <thead>
       <tr>
-          <th>Categorias</th>
-          <th>Opciones</th>
+          <th style="width: 5%;background-color:#6B6C73;color: white;">Categorias</th>
+          <th style="width: 5%;background-color:#6B6C73;color: white;">Opciones</th>
       </tr>
   </thead>
   <tbody>
